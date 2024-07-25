@@ -14,6 +14,7 @@ const sampleData = {
       enabled: true,
       virtualServers: [
         {
+          id: "1",
           cluster: "OHII",
           port: 1111,
           ip: "10.176.21.40",
@@ -22,6 +23,7 @@ const sampleData = {
           ingressTrafficType: "ALB",
         },
         {
+          id: "2",
           cluster: "OHII",
           port: 1111,
           ip: "10.176.21.40",
@@ -30,6 +32,7 @@ const sampleData = {
           ingressTrafficType: "ALB",
         },
         {
+          id: "3",
           cluster: "OREI",
           port: 1111,
           ip: "10.176.21.40",
@@ -41,6 +44,7 @@ const sampleData = {
       tier1: "rs-1212",
       clusters: [
         {
+          id: "1",
           cluster: "test",
           port: 1111,
           ip: "10.176.21.40",
@@ -55,6 +59,7 @@ const sampleData = {
       },
       dns: [
         {
+          id: "1",
           name: "test",
           type: "CNAME",
           ipAddress: "52.2223",
@@ -72,6 +77,7 @@ const sampleData = {
       enabled: true,
       virtualServers: [
         {
+          id: "1",
           cluster: "OHII",
           port: 1111,
           ip: "10.176.21.40",
@@ -80,6 +86,7 @@ const sampleData = {
           ingressTrafficType: "ALB",
         },
         {
+          id: "2",
           cluster: "OHII",
           port: 1111,
           ip: "10.176.21.40",
@@ -88,6 +95,7 @@ const sampleData = {
           ingressTrafficType: "ALB",
         },
         {
+          id: "3",
           cluster: "OREI",
           port: 1111,
           ip: "10.176.21.40",
@@ -99,6 +107,7 @@ const sampleData = {
       tier1: "rs-1212",
       clusters: [
         {
+          id: "1",
           cluster: "test",
           port: 1111,
           ip: "10.176.21.40",
@@ -113,6 +122,7 @@ const sampleData = {
       },
       dns: [
         {
+          id: "1",
           name: "test",
           type: "CNAME",
           ipAddress: "52.2223",
