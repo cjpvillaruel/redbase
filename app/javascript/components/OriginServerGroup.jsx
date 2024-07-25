@@ -12,7 +12,7 @@ const OriginServerGroup = ({ originServerGroup }) => {
       <SecondaryTable
         columns={[
           {
-            name: "cluster",
+            name: "address",
             title: "Address",
           },
           {
@@ -20,7 +20,7 @@ const OriginServerGroup = ({ originServerGroup }) => {
             title: "Port",
           },
         ]}
-        data={[]}
+        data={[{ ...originServerGroup }]}
       />
     </div>
   );
