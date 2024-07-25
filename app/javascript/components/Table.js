@@ -5,12 +5,8 @@ import {
   ChevronDownIcon,
   ChevronUpIcon,
   EllipsisVerticalIcon,
-  PencilIcon,
-  PlusCircleIcon,
-  TrashIcon,
 } from "@heroicons/react/16/solid";
 import Tag from "./Tag";
-import SecondaryTable from "./SecondaryTable";
 import ClusterTable from "./ClustersTable";
 import DNS from "./DNS";
 import OriginServerGroup from "./OriginServerGroup";
@@ -24,7 +20,7 @@ const Table = ({ data }) => {
         <thead className="rounded-t-lg">
           <tr className="border-b-2">
             <th className="py-3 font-semibold text-sm"></th>
-            <th className="py-3 font-semibold text-sm text-left">Name</th>
+            <th className="py-3 font-semibold text-sm text-left w-40">Name</th>
             <th className="py-3 font-semibold text-sm text-left w-40">
               Service Reference
             </th>
