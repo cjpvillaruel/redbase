@@ -25,10 +25,10 @@ const Table = ({ data }) => {
             <th className="py-3 font-semibold text-sm text-left w-40">
               Service Reference
             </th>
-            <th className="py-3 font-semibold text-sm w-3/12 text-left">
+            <th className="py-3 font-semibold text-sm w-1/2 text-left">
               Host names
             </th>
-            <th className="py-3 font-semibold text-sm ">PoPs</th>
+            <th className="py-3 font-semibold text-sm text-left">PoPs</th>
             <th className="py-3 font-semibold text-sm ">Spec</th>
             <th className="py-3 font-semibold text-sm flex justify-center">
               <LockClosedIcon className="size-4" />
@@ -59,10 +59,10 @@ const Table = ({ data }) => {
                 <td className="py-3 font-medium text-sm w-40">
                   {item.serviceReference}
                 </td>
-                <td className="py-3 font-medium text-sm text-left ">
+                <td className="py-3 font-medium text-sm text-left w-1/2">
                   {item.hostName}
                 </td>
-                <td className="py-3 font-medium text-sm text-center">
+                <td className="py-3 font-medium text-sm text-left">
                   {item.pointOfPreferences.join(", ")}
                 </td>
                 <td className="py-3 font-medium text-sm text-center">
