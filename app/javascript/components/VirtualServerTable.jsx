@@ -4,17 +4,6 @@ import { PencilIcon } from "@heroicons/react/16/solid";
 import SecondaryTable from "./SecondaryTable";
 
 const VirtualServerTable = ({ data }) => {
-  // const data = [
-  //   {
-  //     cluster: "test",
-  //     port: 1111,
-  //     ip: "10.176.21.40",
-  //     vsName: "test",
-  //     terminatorType: "HTTPS Redirect",
-  //     ingressTrafficType: "ALB",
-  //   },
-  //   // Add more data objects here if needed
-  // ];
   return (
     <SecondaryTable
       columns={[

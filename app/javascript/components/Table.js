@@ -12,6 +12,8 @@ import {
 import Tag from "./Tag";
 import SecondaryTable from "./SecondaryTable";
 import ClusterTable from "./ClustersTable";
+import DNS from "./DNS";
+import OriginServerGroup from "./OriginServerGroup";
 
 const Table = ({ data }) => {
   const [toggled, setToggled] = useState(1);
@@ -90,70 +92,12 @@ const Table = ({ data }) => {
 
                     <ClusterTable clusters={item.clusters} />
                     <div className="grid grid-cols-3 gap-2 w-full">
-                      <div>
-                        <div className="flex w-full items-center">
-                          <Tag>Origin server group</Tag>
-                          <p className="ml-2 font-semibold">
-                            {item.originServerGroup.pool}
-                          </p>
-                        </div>
-                        <SecondaryTable
-                          columns={[
-                            {
-                              name: "cluster",
-                              title: "Address",
-                            },
-                            {
-                              name: "cluster",
-                              title: "Port",
-                            },
-                          ]}
-                          data={[]}
-                        />
-                      </div>
-                      <div>
-                        <div className="flex w-full items-center">
-                          <Tag>DNS</Tag>
+                      <OriginServerGroup
+                        originServerGroup={item.originServerGroup}
+                      />
 
-                          <CircularButton className="ml-2">
-                            <PlusCircleIcon />
-                          </CircularButton>
-                        </div>
+                      <DNS dns={item.dns} />
 
-                        {item.dns.map((dns, index) => (
-                          <SecondaryTable
-                            columns={[
-                              {
-                                name: "name",
-                                title: "Name",
-                              },
-                              {
-                                name: "type",
-                                title: "Type",
-                              },
-                              {
-                                name: "ipAddress",
-                                title: "IP Address",
-                              },
-                              {
-                                name: "action",
-                                title: "",
-                                render: (item) => (
-                                  <div className="flex">
-                                    <CircularButton className="mr-1">
-                                      <PencilIcon />
-                                    </CircularButton>
-                                    <CircularButton>
-                                      <TrashIcon />
-                                    </CircularButton>
-                                  </div>
-                                ),
-                              },
-                            ]}
-                            data={[dns]}
-                          />
-                        ))}
-                      </div>
                       <div>
                         <div className="flex w-full items-center">
                           <Tag>Monitoring</Tag>
