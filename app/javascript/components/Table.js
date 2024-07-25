@@ -5,6 +5,7 @@ import {
   ChevronDownIcon,
   ChevronUpIcon,
   EllipsisVerticalIcon,
+  LockClosedIcon,
 } from "@heroicons/react/16/solid";
 import Tag from "./Tag";
 import ClusterTable from "./ClustersTable";
@@ -29,8 +30,10 @@ const Table = ({ data }) => {
             </th>
             <th className="py-3 font-semibold text-sm ">PoPs</th>
             <th className="py-3 font-semibold text-sm ">Spec</th>
-            <th className="py-3 font-semibold text-sm ">enabled</th>
-            <th className="py-3 font-semibold text-sm  w-14">Actions</th>
+            <th className="py-3 font-semibold text-sm flex justify-center">
+              <LockClosedIcon className="size-4" />
+            </th>
+            <th className="py-3 font-semibold text-sm  w-14"></th>
           </tr>
         </thead>
         <tbody>
@@ -60,7 +63,7 @@ const Table = ({ data }) => {
                   {item.hostName}
                 </td>
                 <td className="py-3 font-medium text-sm text-center">
-                  {item.pointOfPreferences.join(",")}
+                  {item.pointOfPreferences.join(", ")}
                 </td>
                 <td className="py-3 font-medium text-sm text-center">
                   {item.spec}
