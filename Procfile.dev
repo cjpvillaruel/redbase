@@ -1,0 +1,5 @@
+# Procfile.dev
+
+web: bin/rails s
+js: npm run build --watch
+# css: npm run build:css --watchjs: yarn build --watch
