@@ -39,12 +39,13 @@ const VirtualServerTable = ({ data }) => {
           title: "Terminator Type",
         },
         {
-          name: "ingressTraficType",
+          name: "ingressTrafficType",
           title: "Ingress Traffic Type",
         },
         {
           name: "action",
           title: "",
+          className: "w-14",
           render: (item) => (
             <CircularButton onClick={() => {}}>
               <PencilIcon />

@@ -21,6 +21,14 @@ const sampleData = {
           terminatorType: "HTTPS Redirect",
           ingressTrafficType: "ALB",
         },
+        {
+          cluster: "test",
+          port: 1111,
+          ip: "10.176.21.40",
+          vsName: "test",
+          terminatorType: "HTTPS Redirect",
+          ingressTrafficType: "ALB",
+        },
       ],
       tier1: "rs-1212",
       clusters: [

@@ -5,7 +5,9 @@ import {
   ChevronDownIcon,
   ChevronUpIcon,
   EllipsisVerticalIcon,
+  PencilIcon,
   PlusCircleIcon,
+  TrashIcon,
 } from "@heroicons/react/16/solid";
 import Tag from "./Tag";
 import SecondaryTable from "./SecondaryTable";
@@ -88,21 +90,74 @@ const Table = ({ data }) => {
 
                     <ClusterTable clusters={item.clusters} />
                     <div className="grid grid-cols-3 gap-2 w-full">
-                      <div className="flex items-center">
-                        <Tag>Origin server group</Tag>
-                        <p className="ml-2 font-semibold">
-                          {item.originServerGroup.pool}
-                        </p>
+                      <div>
+                        <div className="flex w-full items-center">
+                          <Tag>Origin server group</Tag>
+                          <p className="ml-2 font-semibold">
+                            {item.originServerGroup.pool}
+                          </p>
+                        </div>
+                        <SecondaryTable
+                          columns={[
+                            {
+                              name: "cluster",
+                              title: "Address",
+                            },
+                            {
+                              name: "cluster",
+                              title: "Port",
+                            },
+                          ]}
+                          data={[]}
+                        />
                       </div>
-                      <div className="flex items-center">
-                        <Tag>DNS</Tag>
+                      <div>
+                        <div className="flex w-full items-center">
+                          <Tag>DNS</Tag>
 
-                        <CircularButton className="ml-2">
-                          <PlusCircleIcon />
-                        </CircularButton>
+                          <CircularButton className="ml-2">
+                            <PlusCircleIcon />
+                          </CircularButton>
+                        </div>
+
+                        {item.dns.map((dns, index) => (
+                          <SecondaryTable
+                            columns={[
+                              {
+                                name: "name",
+                                title: "Name",
+                              },
+                              {
+                                name: "type",
+                                title: "Type",
+                              },
+                              {
+                                name: "ipAddress",
+                                title: "IP Address",
+                              },
+                              {
+                                name: "action",
+                                title: "",
+                                render: (item) => (
+                                  <div className="flex">
+                                    <CircularButton className="mr-1">
+                                      <PencilIcon />
+                                    </CircularButton>
+                                    <CircularButton>
+                                      <TrashIcon />
+                                    </CircularButton>
+                                  </div>
+                                ),
+                              },
+                            ]}
+                            data={[dns]}
+                          />
+                        ))}
                       </div>
-                      <div className="flex items-center">
-                        <Tag>Monitoring</Tag>
+                      <div>
+                        <div className="flex w-full items-center">
+                          <Tag>Monitoring</Tag>
+                        </div>
                       </div>
                     </div>
                   </div>

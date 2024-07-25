@@ -21,12 +21,12 @@ const SecondaryTable = ({ columns, data }) => {
       <tbody>
         {data.map((item, index) => {
           return (
-            <tr item={index} key={index} className="border-b">
+            <tr item={index} key={index}>
               {columns.map((column) => {
                 return (
                   <td
                     key={column.name}
-                    className={`py-3 text-sm ${column.className ?? ""}`}
+                    className={` text-xs font-medium ${column.className ?? ""}`}
                   >
                     {column.render
                       ? column.render(item)
