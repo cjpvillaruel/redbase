@@ -1,6 +1,8 @@
-# README
+## README
 
 ![Screenshot](https://github.com/cjpvillaruel/redbase/blob/main/screenshot.png?raw=true)
+
+## Running Locally
 
 To run this Rails project locally, follow these steps:
 
