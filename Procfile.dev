@@ -2,4 +2,6 @@
 
 web: bin/rails s
 js: npm run build --watch
+tailwind: npm run build:tailwind -- --watch
 # css: npm run build:css --watchjs: yarn build --watch
+
