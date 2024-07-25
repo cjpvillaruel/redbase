@@ -7,7 +7,7 @@ const Header = () => {
       style={{ background: "#323639" }}
     >
       <div>
-        <h2 className="text-2xl">My App</h2>
+        <h2 className="text-2xl">RedBase</h2>
       </div>
     </div>
   );

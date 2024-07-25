@@ -1,4 +1,6 @@
 import React from "react";
+import CircularButton from "./CircularButton";
+import { PencilIcon } from "@heroicons/react/16/solid";
 
 const VirtualServerTable = ({ data }) => {
   // const data = [
@@ -14,26 +16,44 @@ const VirtualServerTable = ({ data }) => {
   // ];
 
   return (
-    <table className="border-collapse w-full">
-      <thead>
+    <table className="border-collapse w-full mb-4 mt-2">
+      <thead className="font-thin">
         <tr>
-          <th>Cluster</th>
-          <th>Port</th>
-          <th>IP</th>
-          <th>VS Name</th>
-          <th>Terminator Type</th>
-          <th>Ingress Traffic Type</th>
+          <th className="font-normal uppercase text-gray-400 text-left text-xs">
+            Cluster
+          </th>
+          <th className="font-normal uppercase text-gray-400 text-left text-xs">
+            Port
+          </th>
+          <th className="font-normal uppercase text-gray-400 text-left text-xs">
+            IP
+          </th>
+          <th className="font-normal uppercase text-gray-400 text-left text-xs">
+            VS Name
+          </th>
+          <th className="font-normal uppercase text-gray-400 text-left text-xs">
+            Terminator Type
+          </th>
+          <th className="font-normal uppercase text-gray-400 text-left text-xs">
+            Ingress Traffic Type
+          </th>
+          <th className="font-normal uppercase text-gray-400 text-left text-xs"></th>
         </tr>
       </thead>
       <tbody>
         {data.map((item, index) => (
           <tr key={index}>
-            <td>{item.cluster}</td>
-            <td>{item.port}</td>
-            <td>{item.ip}</td>
-            <td>{item.vsName}</td>
-            <td>{item.terminatorType}</td>
-            <td>{item.ingressTrafficType}</td>
+            <td className="text-left">{item.cluster}</td>
+            <td className="text-left">{item.port}</td>
+            <td className="text-left">{item.ip}</td>
+            <td className="text-left">{item.vsName}</td>
+            <td className="text-left">{item.terminatorType}</td>
+            <td className="text-left">{item.ingressTrafficType}</td>
+            <td className="text-left">
+              <CircularButton onClick={() => {}}>
+                <PencilIcon />
+              </CircularButton>
+            </td>
           </tr>
         ))}
       </tbody>

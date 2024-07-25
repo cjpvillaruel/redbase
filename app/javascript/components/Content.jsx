@@ -94,22 +94,28 @@ const sampleData = {
 const Content = () => {
   const { name, routes } = sampleData;
   return (
-    <div className="pt-12 pl-16 pr-6 bg-zinc-100 min-h-screen">
-      <h1>{name}</h1>
-      <p>{routes.length} routes</p>
-      <div>
-        <Button variant="secondary" className="mr-2">
-          Grouped by vSG
-        </Button>
-        <Button variant="secondary" className="mr-2">
-          Grouped by app
-        </Button>
-        <Button variant="secondary" className="mr-2">
-          Grouped by Tier
-        </Button>
-        <Button variant="primary" className="mr-2">
-          Ungrouped
-        </Button>
+    <div className="pt-16 pl-16 pr-6 bg-zinc-100 min-h-screen">
+      <h1 className="text-2xl font-semibold">{name}</h1>
+      <p className="my-2">{routes.length} content routes</p>
+      <div className="flex justify-between">
+        <div>
+          <Button variant="secondary" className="mr-2">
+            Grouped by vSG
+          </Button>
+          <Button variant="secondary" className="mr-2">
+            Grouped by app
+          </Button>
+          <Button variant="secondary" className="mr-2">
+            Grouped by Tier
+          </Button>
+          <Button variant="primary" className="mr-2">
+            Ungrouped
+          </Button>
+        </div>
+        <div>
+          <input type="text" className="bg-transparent border mx-2 h-10" />
+          <Button variant="primary">Add new app</Button>
+        </div>
       </div>
 
       <Table data={routes} />
