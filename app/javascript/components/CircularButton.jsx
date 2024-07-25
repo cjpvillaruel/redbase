@@ -3,7 +3,7 @@ import React from "react";
 const CircularButton = ({ children, onClick, className = "" }) => {
   return (
     <button
-      className={`w-8 h-8 p-2 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center ${className}`}
+      className={`w-6 h-6 p-1 rounded-full bg-gray-300 text-gray-600 flex items-center justify-center ${className}`}
       onClick={onClick}
     >
       {children}

@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 import React from "react";
 
-const SecondaryTable = ({ columns, data }) => {
+const SecondaryTable = ({ columns, data, className = "" }) => {
   return (
-    <table className="border-collapse w-full mb-4 mt-2">
+    <table className={`border-collapse w-full mb-4 mt-2 ${className}`}>
       <thead className="font-thin">
         <tr>
           {columns.map((column) => {

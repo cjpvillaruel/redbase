@@ -41,7 +41,7 @@ const sampleData = {
           ingressTrafficType: "ALB",
         },
       ],
-      tier1: "rs-1212",
+      tier1: "RS-2024-1010-T1-4",
       clusters: [
         {
           id: "1",
@@ -53,7 +53,7 @@ const sampleData = {
         },
       ],
       originServerGroup: {
-        pool: "test",
+        pool: "RS-2024-1010-T1-4_pool",
         address: "52.6343",
         port: 80,
       },
@@ -104,7 +104,7 @@ const sampleData = {
           ingressTrafficType: "ALB",
         },
       ],
-      tier1: "rs-1212",
+      tier1: "RS-2024-1010-T1-4",
       clusters: [
         {
           id: "1",
@@ -116,7 +116,7 @@ const sampleData = {
         },
       ],
       originServerGroup: {
-        pool: "test",
+        pool: "RS-2024-1010-T1-4_pool",
         address: "52.6343",
         port: 80,
       },
@@ -155,7 +155,11 @@ const Content = () => {
           </Button>
         </div>
         <div>
-          <input type="text" className="bg-transparent border mx-2 h-10" />
+          <input
+            type="text"
+            className="bg-transparent border mx-2 h-10 px-2"
+            placeholder="Content route search"
+          />
           <Button variant="primary">Add new app</Button>
         </div>
       </div>

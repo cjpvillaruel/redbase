@@ -81,9 +81,9 @@ const Table = ({ data }) => {
                   <div className="px-2 py-4">
                     <Tag>Virtual Servers</Tag>
                     <VirtualServerTable data={item.virtualServers} />
-                    <div className="flex">
+                    <div className="flex items-center">
                       <Tag>Tier1</Tag>
-                      <p className="ml-2 font-semibold">{item.tier1}</p>
+                      <p className="ml-2 font-bold text-xs">{item.tier1}</p>
                     </div>
 
                     <ClusterTable clusters={item.clusters} />
@@ -91,9 +91,7 @@ const Table = ({ data }) => {
                       <OriginServerGroup
                         originServerGroup={item.originServerGroup}
                       />
-
                       <DNS dns={item.dns} />
-
                       <div>
                         <div className="flex w-full items-center">
                           <Tag>Monitoring</Tag>

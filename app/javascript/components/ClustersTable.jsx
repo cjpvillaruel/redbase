@@ -4,6 +4,7 @@ import SecondaryTable from "./SecondaryTable";
 const ClustersTable = ({ clusters }) => {
   return (
     <SecondaryTable
+      className="mb-6"
       data={clusters}
       columns={[
         {

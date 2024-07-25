@@ -7,7 +7,7 @@ const OriginServerGroup = ({ originServerGroup }) => {
     <div>
       <div className="flex w-full items-center">
         <Tag>Origin server group</Tag>
-        <p className="ml-2 font-semibold">{originServerGroup.pool}</p>
+        <p className="ml-2 font-bold text-xs">{originServerGroup.pool}</p>
       </div>
       <SecondaryTable
         columns={[
