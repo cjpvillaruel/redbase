@@ -5,36 +5,39 @@ import {
   ChevronDownIcon,
   ChevronUpIcon,
   EllipsisVerticalIcon,
-  PencilIcon,
   PlusCircleIcon,
 } from "@heroicons/react/16/solid";
 import Tag from "./Tag";
+import SecondaryTable from "./SecondaryTable";
+import ClusterTable from "./ClustersTable";
 
 const Table = ({ data }) => {
   const [toggled, setToggled] = useState(1);
 
   return (
     <div className="overflow-x-auto bg-white rounded-lg mt-4 pb-2">
-      <table className="border-collapse w-full rounded-lg">
+      <table className="border-collapse w-full rounded-lg ">
         <thead className="rounded-t-lg">
           <tr className="border-b-2">
-            <th className="py-3 font-semibold"></th>
-            <th className="py-3 font-semibold text-left">Name</th>
-            <th className="py-3 font-semibold text-left w-40">
+            <th className="py-3 font-semibold text-sm"></th>
+            <th className="py-3 font-semibold text-sm text-left">Name</th>
+            <th className="py-3 font-semibold text-sm text-left w-40">
               Service Reference
             </th>
-            <th className="py-3 font-semibold w-3/12">Host names</th>
-            <th className="py-3 font-semibold ">PoPs</th>
-            <th className="py-3 font-semibold ">Spec</th>
-            <th className="py-3 font-semibold ">enabled</th>
-            <th className="py-3 font-semibold  w-14">Actions</th>
+            <th className="py-3 font-semibold text-sm w-3/12 text-left">
+              Host names
+            </th>
+            <th className="py-3 font-semibold text-sm ">PoPs</th>
+            <th className="py-3 font-semibold text-sm ">Spec</th>
+            <th className="py-3 font-semibold text-sm ">enabled</th>
+            <th className="py-3 font-semibold text-sm  w-14">Actions</th>
           </tr>
         </thead>
         <tbody>
           {data.map((item, index) => (
             <>
               <tr key={index}>
-                <td className="py-3 pl-2 w-14">
+                <td className="py-3 font-medium text-sm pl-2 w-14">
                   <CircularButton
                     onClick={() => {
                       toggled !== item.id
@@ -49,17 +52,23 @@ const Table = ({ data }) => {
                     )}
                   </CircularButton>
                 </td>
-                <td className="py-3">{item.name}</td>
-                <td className="py-3 w-40">{item.serviceReference}</td>
-                <td className="py-3 text-center ">{item.hostName}</td>
-                <td className="py-3 text-center">
+                <td className="py-3 font-medium text-sm">{item.name}</td>
+                <td className="py-3 font-medium text-sm w-40">
+                  {item.serviceReference}
+                </td>
+                <td className="py-3 font-medium text-sm text-left ">
+                  {item.hostName}
+                </td>
+                <td className="py-3 font-medium text-sm text-center">
                   {item.pointOfPreferences.join(",")}
                 </td>
-                <td className="py-3 text-center">{item.spec}</td>
-                <td className="py-3 text-center">
+                <td className="py-3 font-medium text-sm text-center">
+                  {item.spec}
+                </td>
+                <td className="py-3 font-medium text-sm text-center">
                   {item.enabled ? "Yes" : "No"}
                 </td>
-                <td className="py-3 flex  w-14">
+                <td className="py-3 font-medium text-sm flex  w-14">
                   <CircularButton>
                     <EllipsisVerticalIcon />
                   </CircularButton>
@@ -76,7 +85,8 @@ const Table = ({ data }) => {
                       <Tag>Tier1</Tag>
                       <p className="ml-2 font-semibold">{item.tier1}</p>
                     </div>
-                    <VirtualServerTable data={[]} />
+
+                    <ClusterTable clusters={item.clusters} />
                     <div className="grid grid-cols-3 gap-2 w-full">
                       <div className="flex items-center">
                         <Tag>Origin server group</Tag>
