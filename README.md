@@ -1,5 +1,7 @@
 # README
 
+![Screenshot](https://github.com/cjpvillaruel/redbase/blob/main/screenshot.png?raw=true)
+
 To run this Rails project locally, follow these steps:
 
 1. Make sure you have Ruby installed. You can check the Ruby version by running the following command in your terminal:
