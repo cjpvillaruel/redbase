@@ -1,0 +1,120 @@
+import React from "react";
+import Button from "./Button";
+import Table from "./Table";
+const sampleData = {
+  name: "Deal a Day",
+  routes: [
+    {
+      id: 1,
+      name: "test",
+      serviceReference: "test",
+      hostName: "mfa.redshield.com",
+      pointOfPreferences: ["test"],
+      spec: 1.0,
+      enabled: true,
+      virtualServers: [
+        {
+          cluster: "test",
+          port: 1111,
+          ip: "10.176.21.40",
+          vsName: "test",
+          terminatorType: "HTTPS Redirect",
+          ingressTrafficType: "ALB",
+        },
+      ],
+      tier1: "rs-1212",
+      clusters: [
+        {
+          cluster: "test",
+          port: 1111,
+          ip: "10.176.21.40",
+          terminator: "HTTPS Redirect",
+          ingressTrafficType: "ALB",
+        },
+      ],
+      originServerGroup: {
+        pool: "test",
+        address: "52.6343",
+        port: 80,
+      },
+      dns: [
+        {
+          name: "test",
+          type: "CNAME",
+          ipAddress: "52.2223",
+        },
+      ],
+      monitorType: "HTTP",
+    },
+    {
+      id: 2,
+      name: "test",
+      serviceReference: "test",
+      hostName: "mfa.redshield.com",
+      pointOfPreferences: ["test"],
+      spec: 1.0,
+      enabled: true,
+      virtualServers: [
+        {
+          cluster: "test",
+          port: 1111,
+          ip: "10.176.21.40",
+          vsName: "test",
+          terminatorType: "HTTPS Redirect",
+          ingressTrafficType: "ALB",
+        },
+      ],
+      tier1: "rs-1212",
+      clusters: [
+        {
+          cluster: "test",
+          port: 1111,
+          ip: "10.176.21.40",
+          terminator: "HTTPS Redirect",
+          ingressTrafficType: "ALB",
+        },
+      ],
+      originServerGroup: {
+        pool: "test",
+        address: "52.6343",
+        port: 80,
+      },
+      dns: [
+        {
+          name: "test",
+          type: "CNAME",
+          ipAddress: "52.2223",
+        },
+      ],
+      monitorType: "HTTP",
+    },
+  ],
+};
+
+const Content = () => {
+  const { name, routes } = sampleData;
+  return (
+    <div className="pt-12 pl-16 pr-6 bg-zinc-100 min-h-screen">
+      <h1>{name}</h1>
+      <p>{routes.length} routes</p>
+      <div>
+        <Button variant="secondary" className="mr-2">
+          Grouped by vSG
+        </Button>
+        <Button variant="secondary" className="mr-2">
+          Grouped by app
+        </Button>
+        <Button variant="secondary" className="mr-2">
+          Grouped by Tier
+        </Button>
+        <Button variant="primary" className="mr-2">
+          Ungrouped
+        </Button>
+      </div>
+
+      <Table data={routes} />
+    </div>
+  );
+};
+
+export default Content;
