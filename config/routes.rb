@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   root 'homepage#index'
+  get 'redbase' => 'redbase#index'
   get '/*path' => 'homepage#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

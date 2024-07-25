@@ -1,4 +1,3 @@
-// create button component  using tailwind with border radius of 2
 import React from "react";
 const Button = ({ children, variant, className }) => {
   const defaultClasses = "font-semibold py-2 px-4 rounded-md flex";
