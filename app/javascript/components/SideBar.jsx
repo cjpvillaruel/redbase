@@ -1,5 +1,12 @@
 import React from "react";
-import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
+import {
+  ArrowUpIcon,
+  LockClosedIcon,
+  MagnifyingGlassIcon,
+  UserPlusIcon,
+} from "@heroicons/react/24/solid";
+import { ArrowsUpDownIcon, PlusCircleIcon } from "@heroicons/react/16/solid";
+import { ShieldCheckIcon } from "@heroicons/react/16/solid";
 
 const SideBar = () => {
   return (
@@ -12,22 +19,32 @@ const SideBar = () => {
         </li>
         <li className="mb-2">
           <a href="#" className="hover:underline">
-            <MagnifyingGlassIcon className="size-6 mb-5" />
+            <PlusCircleIcon className="size-6 mb-5" />
           </a>
         </li>
         <li className="mb-2">
           <a href="#" className="hover:underline">
-            <MagnifyingGlassIcon className="size-6 mb-5" />
+            <LockClosedIcon className="size-6 mb-5" />
           </a>
         </li>
         <li className="mb-2">
           <a href="#" className="hover:underline">
-            <MagnifyingGlassIcon className="size-6 mb-5" />
+            <ArrowUpIcon className="size-6 mb-5" />
           </a>
         </li>
         <li className="mb-2">
           <a href="#" className="hover:underline">
-            <MagnifyingGlassIcon className="size-6 mb-5" />
+            <ArrowsUpDownIcon className="size-6 mb-5" />
+          </a>
+        </li>
+        <li className="mb-2">
+          <a href="#" className="hover:underline">
+            <LockClosedIcon className="size-6 mb-5" />
+          </a>
+        </li>
+        <li className="mb-2">
+          <a href="#" className="hover:underline">
+            <ShieldCheckIcon className="size-6 mb-5" />
           </a>
         </li>
       </ul>
