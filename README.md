@@ -2,6 +2,12 @@
 
 ![Screenshot](https://github.com/cjpvillaruel/redbase/blob/main/screenshot.png?raw=true)
 
+## Run using Docker
+
+```
+docker-compose up
+```
+
 ## Running Locally
 
 To run this Rails project locally, follow these steps:
@@ -37,10 +43,3 @@ To run this Rails project locally, follow these steps:
 7. Access the application. Open your web browser and navigate to `http://localhost:3000` to access the running application.
 
 For deployment instructions and additional services, refer to the project's documentation.
-
-
-## Run using Docker
-
-```
-docker-compose up
-```
