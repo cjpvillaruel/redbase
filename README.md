@@ -4,6 +4,14 @@
 
 ## Run using Docker
 
+Create a tmp folder for the database:
+
+```
+mkdir tmp/db
+```
+
+Then run:
+
 ```
 docker-compose up
 ```
