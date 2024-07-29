@@ -1,6 +1,6 @@
 # Procfile.dev
 
-web: bin/rails s
+web: ./bin/rails s -b 0.0.0.0
 js: npm run build -- --watch
 tailwind: npm run build:tailwind -- --watch
 # css: npm run build:css --watchjs: yarn build --watch

@@ -7,7 +7,10 @@ const Content = () => {
   const [data, setData] = useState(null);
 
   const getRedbaseData = async () => {
-    const response = await fetch("http://localhost:3000/redbase");
+    const response = await fetch("http://localhost:3000/redbase", {
+      headers: {
+      "Content-Type": "application/json",
+    }});
     const data = await response.json();
     setData(data);
   };
